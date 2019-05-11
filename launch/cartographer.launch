@@ -26,9 +26,6 @@
     <param name="baud" type="int" value="38400"/>
   </node>
 
-  <!-- imu -->
-  <!--node name="imu_demo" pkg="pioneer3dx_cartographer" type="imu_demo" /-->
-
   <!-- cartographer -->
   <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="-configuration_directory $(find pioneer3dx_cartographer)/configuration_files -configuration_basename pioneer.lua" output="screen"></node>
 
