@@ -17,11 +17,14 @@
   <node pkg="p2os_urdf" type="p2os_publisher_3dx" name="publisher"/>
 
   <!-- tf -->
-  <include file="$(find p2os_launch)/launch/tf_base_link_to_laser.launch"/>
-  <!--node pkg="tf" type="static_transform_publisher" name="imu_link" args="0 0 0 0 0 0 base_link imu 100" /-->
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0 0 0.1397 0 0 0 base_link laser 100"/>
+  <!--node pkg="tf" type="static_transform_publisher" name="base_link_to_imu" args="0 0 0 0 0 0 base_link imu 100" /-->
 
   <!-- Laser scanner -->
-  <include file="$(find p2os_launch)/launch/sicklms.launch"/>
+  <node pkg="sicktoolbox_wrapper" type="sicklms" name="sicklms_node">
+    <param name="port" type="string" value="/dev/ttyUSB0"/>
+    <param name="baud" type="int" value="38400"/>
+  </node>
 
   <!-- imu -->
   <!--node name="imu_demo" pkg="pioneer3dx_cartographer" type="imu_demo" /-->
