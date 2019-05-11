@@ -19,8 +19,8 @@ TODO
 
 The following libraries are required.
 
-* P2OS (https://github.com/allenh1/p2os)
-* Google Cartographer (https://github.com/googlecartographer/cartographer)
+* p2os (https://github.com/allenh1/p2os)
+* cartographer (https://github.com/googlecartographer/cartographer)
 * sicktoolbox_wrapper (https://github.com/ros-drivers/sicktoolbox_wrapper)
 
 ### Package installation
