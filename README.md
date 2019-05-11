@@ -10,16 +10,22 @@ TODO
 
 ## Installation
 
+### Prerequisites
+
+* Pioneer3dx robot
+* SICK LMS200-30106 laser scanner
+
 ### Dependencies
 
 The following libraries are required.
 
 * P2OS (https://github.com/allenh1/p2os)
 * Google Cartographer (https://github.com/googlecartographer/cartographer)
+* sicktoolbox_wrapper (https://github.com/ros-drivers/sicktoolbox_wrapper)
 
-### Installation of pioneer3dx_cartographer
+### Package installation
 
-Install pioneer3dx_cartographer into your catkin workspace and build them using CMake.
+Install pioneer3dx_cartographer into your catkin workspace and build the package using CMake.
 
 ```console
 $ cd ~/catkin_ws/src
