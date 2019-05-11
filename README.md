@@ -39,3 +39,5 @@ $ catkin_make
 TODO
 
 ## Future plans
+
+* Adding an IMU to the package (https://www.conrad.de/de/p/tinkerforge-imu-brick-2-0-1411060.html)
