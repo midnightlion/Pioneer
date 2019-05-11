@@ -1,10 +1,10 @@
 # pioneer3dx cartographer
 
-## Einführung
+## Introduction
 
-TODO
+This package enables cartographing using the Google Cartographer for the pioneer3dx robot. The package provides ready-to-use launch files and other important configuration files.
 
-## Grundlagen
+## Main concepts
 
 TODO
 
@@ -30,10 +30,12 @@ Install pioneer3dx_cartographer into your catkin workspace and build the package
 ```console
 $ cd ~/catkin_ws/src
 $ git clone https://github.com/informatik-mannheim/Pioneer
-$ cd ../
+$ cd ..
 $ catkin_make
 ```
 
-## Kartierung
+## Cartographing
 
 TODO
+
+## Future plans
