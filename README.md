@@ -41,3 +41,33 @@ $ catkin_make
 ```
 
 ## Cartographing
+
+### Recording your own bag file
+
+Record scan, tf and imu data using a rosbag record. Be sure to start these components at first. You could use the cartographer.launch file for example.
+
+```console
+$ rosbag record scan tf imu
+```
+
+Then validate your recorded file for possible errors or optimisation infos.
+
+```console
+$ cartographer_rosbag_validate -bag-filename recorded.bag
+```
+
+### Offline cartographing
+
+This runs the offline cartographer using your previously created bag file. This launch file starts the cartographer and rviz for visualisation and then plays your rosbag file.
+
+```console
+$ roslaunch launch/offline_cartographer.launch bag_filename:=/home/pioneer/recorded.bag
+```
+
+### Online cartographing
+
+This runs the online cartographer. This launch file starts the necessary components like motor, laser scanner and imu, starts the cartographer and rviz for visualisation.
+
+```console
+roslaunch launch/cartographer.launch
+```
