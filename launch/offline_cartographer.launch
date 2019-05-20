@@ -1,9 +1,4 @@
-<launch>
-  <!-- rosbag -->
-  <param name="/use_sim_time" value="true" />
-  
-  <node name="playbag" pkg="rosbag" type="play" args="--clock $(arg bag_filename)" />
-  
+<launch>  
   <!-- cartographer -->
   <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="-configuration_directory $(find pioneer3dx_cartographer)/configuration_files -configuration_basename pioneer.lua" output="screen"></node>
 
@@ -11,4 +6,9 @@
 
   <!-- rviz -->
   <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find pioneer3dx_cartographer)/configuration_files/pioneer.rviz"/>
+  
+  <!-- rosbag -->
+  <param name="/use_sim_time" value="true" />
+  
+  <node name="playbag" pkg="rosbag" type="play" args="--clock $(arg bag_filename)" />
 </launch>
