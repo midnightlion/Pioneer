@@ -1,5 +1,5 @@
 <launch>
-  <include file="$(find pioneer3dx_explorer)/launch/pioneer.launch"/>
+  <include file="$(find pioneer3dx_cartographer)/launch/pioneer.launch"/>
   
   <!-- cartographer -->
   <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="-configuration_directory $(find pioneer3dx_cartographer)/configuration_files -configuration_basename pioneer.lua" output="screen"></node>
