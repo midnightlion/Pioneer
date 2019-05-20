@@ -8,6 +8,10 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
-catkin_package()
+catkin_package(
 
-${catkin_INCLUDE_DIRS}
+)
+
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
