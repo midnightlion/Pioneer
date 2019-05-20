@@ -69,5 +69,5 @@ $ roslaunch launch/offline_cartographer.launch bag_filename:=/home/pioneer/recor
 This runs the online cartographer. This launch file starts the necessary components like motor, laser scanner and imu, starts the cartographer and rviz for visualisation.
 
 ```console
-roslaunch launch/cartographer.launch
+$ roslaunch launch/cartographer.launch
 ```
