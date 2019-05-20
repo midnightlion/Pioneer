@@ -44,9 +44,10 @@ $ catkin_make
 
 ### Recording your own bag file
 
-Record scan, tf and imu data using a rosbag record. Be sure to start these components at first. You could use the cartographer.launch file for example.
+Record scan, tf and imu data using a rosbag record. Be sure to start these components at first. You could use the pioneer.launch file for example or start the components by yourself.
 
 ```console
+$ roslaunch launch/pioneer.launch
 $ rosbag record scan tf imu
 ```
 
