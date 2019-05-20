@@ -1,4 +1,4 @@
-# pioneer3dx-explorer
+# pioneer3dx_explorer
 
 ## Introduction
 
