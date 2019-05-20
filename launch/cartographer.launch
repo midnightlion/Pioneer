@@ -1,11 +1,11 @@
 <launch>
-  <include file="$(find pioneer3dx_cartographer)/launch/pioneer.launch"/>
+  <include file="$(find pioneer3dx_explorer)/launch/pioneer.launch"/>
   
   <!-- cartographer -->
-  <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="-configuration_directory $(find pioneer3dx_cartographer)/configuration_files -configuration_basename pioneer.lua" output="screen"></node>
+  <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="-configuration_directory $(find pioneer3dx_explorer)/configuration_files -configuration_basename pioneer.lua" output="screen"></node>
 
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros" type="cartographer_occupancy_grid_node" args="-resolution 0.05"/>
 
   <!-- rviz -->
-  <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find pioneer3dx_cartographer)/configuration_files/pioneer.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find pioneer3dx_explorer)/configuration_files/pioneer.rviz"/>
 </launch>

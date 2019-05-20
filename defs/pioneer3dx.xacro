@@ -2,6 +2,6 @@
 
 <robot name="pioneer3dx" xmlns:xacro="http://ros.org/wiki/xacro">
 	   
-  <xacro:include filename="$(find pioneer3dx_cartographer)/defs/pioneer3dx_body.xacro"/>
+  <xacro:include filename="$(find pioneer3dx_explorer)/defs/pioneer3dx_body.xacro"/>
 
 </robot>

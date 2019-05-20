@@ -2,7 +2,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find pioneer3dx_cartographer)/defs/materials.xacro"/>
+  <xacro:include filename="$(find pioneer3dx_explorer)/defs/materials.xacro"/>
 
   <!-- Properties (Constants) -->
   <xacro:property name="M_PI" value="3.14159"/>
@@ -19,7 +19,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry name="pioneer_geom">
-          <mesh filename="package://pioneer3dx_cartographer/meshes/${suffix}_wheel.stl"/>
+          <mesh filename="package://pioneer3dx_explorer/meshes/${suffix}_wheel.stl"/>
         </geometry>
         <material name="WheelBlack">
           <color rgba="0.117 0.117 0.117 1"/>
@@ -50,7 +50,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry name="pioneer_geom">
-          <mesh filename="package://pioneer3dx_cartographer/meshes/${suffix}_hubcap.stl"/>
+          <mesh filename="package://pioneer3dx_explorer/meshes/${suffix}_hubcap.stl"/>
         </geometry>
         <material name="HubcapYellow">
           <color rgba="1.0 0.811 0.151 1.0"/>

@@ -31,7 +31,7 @@ The following libraries are required.
 
 ### Package installation
 
-Install pioneer3dx-explorer into your workspace and build the package using catkin.
+Install pioneer3dx_explorer into your workspace and build the package using catkin.
 
 ```console
 $ cd ~/catkin_ws/src
