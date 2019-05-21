@@ -4,15 +4,7 @@
 
 This package enables cartographing using the Google Cartographer for the pioneer3dx robot. The package provides ready-to-use launch files and other important configuration files.
 
-## Main concepts
-
-### 
-
-### 
-
 ## Installation
-
-
 
 ### Prerequisites
 
@@ -41,6 +33,10 @@ $ catkin_make
 ```
 
 ## Cartographing
+
+### Important notes
+
+When cartographing try to move as slowly as possible and do not move backwards. This ensures maximum accuracy while creating the map.
 
 ### Recording your own bag file
 
