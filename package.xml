@@ -2,7 +2,7 @@
 <package format="2">
   <name>pioneer3dx_explorer</name>
   <version>1.0.0</version>
-  <description>The pioneer3dx package</description>
+  <description>The pioneer3dx_explorer package</description>
 
   <maintainer email="daniel.koch@stud.hs-mannheim.de">Daniel Koch</maintainer>
 
