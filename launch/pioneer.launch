@@ -5,7 +5,6 @@
 
   <include file="$(find p2os_launch)/launch/teleop_joy.launch"/>
 
-  <!-- urdf -->
   <param name="robot_description" command="$(find xacro)/xacro $(find pioneer3dx_explorer)/defs/pioneer3dx.xacro"/>
 
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
@@ -13,10 +12,9 @@
     <param name="tf_prefix" type="string" value=""/>
   </node>
 
-  <node pkg="p2os_urdf" type="p2os_publisher_3dx" name="publisher"/>
-
   <!-- tf -->
-  <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0 0 0.1397 0 0 0 base_link laser 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="laser_link" args="0.12 0 0.07 0 0 0 top_plate laser 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="imu_link" args="-0.038 0 0.112 0 0 0 top_plate imu 100"/>
 
   <!-- Laser scanner -->
   <node pkg="sicktoolbox_wrapper" type="sicklms" name="sicklms_node">

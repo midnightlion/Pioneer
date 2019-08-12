@@ -32,4 +32,6 @@ MAP_BUILDER.use_trajectory_builder_2d = true
 TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 10
 TRAJECTORY_BUILDER_2D.use_imu_data=true
 
+POSE_GRAPH.optimize_every_n_nodes=0
+
 return options

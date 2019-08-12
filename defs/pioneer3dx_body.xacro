@@ -65,6 +65,31 @@
 	<child link="top_plate"/>
   </joint>
 
+    <joint name="laser_joint" type="fixed">
+    <parent link="top_plate"/>
+    <child link="laser_link"/>
+    <origin rpy="0 0 0" xyz="0.12 0 0.07"/>
+  </joint>
+  <link name="laser_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://pioneer3dx_explorer/meshes/laser.stl"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.24 0.63 0.86 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="top_plate"/>
+    <child link="imu_link"/>
+    <origin rpy="0 0 0" xyz="-0.038 0 0.112"/>
+  </joint>
+  <link name="imu_link">
+  </link>
+
+
   <!-- Swivel -->
   <link name="swivel">
 	<inertial>
@@ -162,8 +187,8 @@
 	<child link="center_hubcap"/>
   </joint>
 
-  <xacro:p3dx_wheel suffix="left" parent="base_link" reflect="1"/>
-  <xacro:p3dx_wheel suffix="right" parent="base_link" reflect="-1"/>
+  <xacro:p3dx_wheel suffix="left" parent="base_link" reflect="1.0"/>
+  <xacro:p3dx_wheel suffix="right" parent="base_link" reflect="-1.0"/>
 
   <!-- Front + Back Sonar -->
   <link name="front_sonar">
