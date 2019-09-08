@@ -1,0 +1,16 @@
+<launch>
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen" args="/scan">
+    <param name="delta" type="double" value="0.05" />
+    <param name="temporalUpdate" type="double" value="2.5" />
+    <param name="xmin" type="double" value="-2" />
+    <param name="xmax" type="double" value="2" />
+    <param name="ymin" type="double" value="-2" />
+    <param name="ymax" type="double" value="2" />
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find pioneer3dx_explorer)/configuration_files/pioneer.rviz" />
+
+  <param name="/use_sim_time" value="true" />
+
+  <node name="playbag" pkg="rosbag" type="play" args="--clock $(arg bag_filename)" />
+</launch>
