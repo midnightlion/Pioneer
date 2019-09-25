@@ -1,6 +1,14 @@
 import rosbag
 
-with rosbag.Bag('umdentischschnell2.bag', 'w') as outbag:
-    for topic, msg, t in rosbag.Bag('umdentischschnell.bag').read_messages():
-	if not (topic == "/tf" and msg.transforms[0].child_frame_id == 'imu'):
-		outbag.write(topic, msg, msg.header.stamp if msg._has_header else t)
+files = ["umdentischzickzack.bag", "raum207zweieingaenge.bag", "umdentischrueckwaerts.bag", "umdentisch.bag", "umdentischschnell.bag"]
+
+print files
+
+for i in range(len(files)):
+	with rosbag.Bag(files[i] + '2', 'w') as outbag:
+		for topic, msg, t in rosbag.Bag(files[i]).read_messages():
+			if topic == "/tf_static":
+				del msg.transforms[6]
+			if not (topic == "/tf" and msg.transforms[0].child_frame_id == 'imu'):
+				outbag.write(topic, msg, t)
+

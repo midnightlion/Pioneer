@@ -1,4 +1,6 @@
 <launch>  
+  <param name="robot_description" command="$(find xacro)/xacro $(find pioneer3dx_explorer)/defs/pioneer3dx.xacro"/>
+
   <!-- cartographer -->
   <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args="-configuration_directory $(find pioneer3dx_explorer)/configuration_files -configuration_basename pioneer.lua" output="screen"></node>
 
