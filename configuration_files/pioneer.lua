@@ -35,4 +35,6 @@ TRAJECTORY_BUILDER_2D.use_imu_data=false
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight=10
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight=2
 
+TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = true
+
 return options
