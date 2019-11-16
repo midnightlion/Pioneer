@@ -10,6 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
   pcl_ros
   openni_launch
   openni2_launch
+  p2os_launch
 )
 
 catkin_package(
